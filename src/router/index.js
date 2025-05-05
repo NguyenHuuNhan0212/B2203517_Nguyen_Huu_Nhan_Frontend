@@ -11,6 +11,12 @@ const routes = [
         path: '/:pathMatch(.*)*',
         name: 'notfound',
         component: () => import('@/views/NotFound.vue')
+    },
+    {
+        path: '/contacts/:id',
+        name: 'contact.edit',
+        component: () => import('@/views/ContactEdit.vue'),
+        props: true,// truyen cac bien params vao lam props
     }
 ]
 const router = createRouter({
