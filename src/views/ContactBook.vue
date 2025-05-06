@@ -100,8 +100,6 @@ export default {
         async retrieveContacts(){
             try{
                 this.contacts = await ContactService.getAll()
-                console.log("Dữ liệu từ server:", JSON.parse(JSON.stringify(this.contacts)));
-
             }catch(error) {
                 console.log(error)
             }
